@@ -15,3 +15,4 @@ apps/*/.next
 .eslintcache
 *storybook.log
 storybook-static
+.vercel
