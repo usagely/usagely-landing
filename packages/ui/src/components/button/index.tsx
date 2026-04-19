@@ -105,8 +105,14 @@ function Button({
       )}
       {...props}
     >
-      {!asChild && pending && <Loader2Icon className="animate-spin" />}
-      {props.children}
+      {asChild ? (
+        props.children
+      ) : (
+        <>
+          {pending && <Loader2Icon className="animate-spin" />}
+          {props.children}
+        </>
+      )}
     </Comp>
   );
 }
