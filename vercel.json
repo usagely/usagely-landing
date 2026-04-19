@@ -1,5 +1,10 @@
 {
   "framework": "nextjs",
   "installCommand": "npm install -g pnpm@9 && pnpm install",
-  "buildCommand": "cd apps/web && next build"
+  "buildCommand": "cd apps/web && next build",
+  "functions": {
+    "api/og/route.tsx": {
+      "memory": 1024
+    }
+  }
 }
