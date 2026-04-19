@@ -83,20 +83,15 @@ export default function MarketingClean() {
               </div>
             </div>
 
-            <picture>
-              <source
-                media="(max-width: 640px)"
-                srcSet="/assets/website/dashboard/dashboard-hero-mobile.webp"
-              />
-              <Image
-                src="/assets/website/dashboard/dashboard-hero.webp"
-                alt="Usagely dashboard — unified AI spend visibility with KPI cards, anomaly detection, recommendations, and team-level breakdown"
-                width={2400}
-                height={2730}
-                priority
-                className="w-full h-auto block"
-              />
-            </picture>
+            <Image
+              src="/assets/website/dashboard/dashboard-hero.webp"
+              alt="Usagely dashboard — unified AI spend visibility with KPI cards, anomaly detection, recommendations, and team-level breakdown"
+              width={2400}
+              height={2728}
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
+              className="w-full h-auto block"
+            />
           </div>
 
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent dark:from-background" />
