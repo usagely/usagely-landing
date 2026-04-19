@@ -1,0 +1,67 @@
+---
+category: "AI FinOps"
+title: "What Is AI FinOps? A Practical Guide for Engineering Teams"
+author: "Usagely Team"
+excerpt: "AI FinOps is the practice of bringing financial accountability to AI and LLM spending. Here's why it matters and how to get started."
+publishedAt: "2026-04-15"
+updatedAt: "2026-04-15"
+coverSrc: "/assets/website/blog-image.png"
+authorImageSrc: "/assets/website/author-image.png"
+readingTime: "6 min read"
+draft: false
+---
+
+## The Rise of AI Spending
+
+AI adoption is exploding across every industry. Teams are signing up for OpenAI, Anthropic, GitHub Copilot, Cursor, and a dozen other tools — often without formal approval or budgeting.
+
+The result? AI spending is the fastest-growing uncontrolled cost in technology companies today.
+
+## What Is AI FinOps?
+
+**AI FinOps** is the practice of bringing financial accountability to AI and LLM spending. It extends the principles of cloud FinOps — visibility, optimization, and governance — to the unique challenges of AI tool and model costs.
+
+Unlike traditional cloud infrastructure (VMs, storage, networking), AI spending is:
+
+- **Fragmented** across dozens of vendors (OpenAI, Anthropic, Google, Microsoft, and more)
+- **Bottom-up** — developers adopt tools individually, not through procurement
+- **Token-based** — costs scale with usage in ways that are hard to predict
+- **Seat-based** — per-user licenses for tools like Copilot add up fast
+
+## The Five Pillars of AI FinOps
+
+### 1. Visibility
+You can't control what you can't see. The first step is getting a unified dashboard of every AI tool, model, and user — with real cost numbers.
+
+### 2. Budgeting
+Set monthly or quarterly budgets by team or scope. Define alert thresholds so you're warned before overruns happen.
+
+### 3. Anomaly Detection
+AI spending can spike unexpectedly — a team running a batch job, a model upgrade that costs 3x more, or a developer experimenting with a new API. Automatic anomaly detection catches these early.
+
+### 4. Optimization
+Once you have visibility, you can act. Identify duplicate tools, over-provisioned seats, and cheaper model alternatives. Get confidence-scored savings recommendations.
+
+### 5. Governance
+Approval workflows for new AI tools, shadow AI detection, and clear policies help teams stay productive while maintaining control.
+
+## Why Traditional Cloud FinOps Doesn't Work for AI
+
+Cloud cost tools like Infracost, CloudHealth, and AWS Cost Explorer track EC2 instances and S3 buckets — not LLM tokens or Copilot seats. They operate at the infrastructure layer, not the application layer where AI costs accumulate.
+
+AI FinOps requires a purpose-built approach designed around:
+
+- **Tokens** (input/output, cost per million tokens)
+- **Models** (GPT-4o, Claude Sonnet, Gemini Pro — each with different pricing)
+- **Tools** (APIs, IDEs, chat products — with mixed pricing models)
+- **Users** (per-seat licenses, individual API keys, shared accounts)
+
+## Getting Started with AI FinOps
+
+1. **Audit your current AI tools** — List every tool your team uses, including unofficial ones
+2. **Centralize cost data** — Pull billing from each provider into one view
+3. **Set budgets** — Define spending limits per team and per tool
+4. **Monitor weekly** — Check for anomalies and unexpected spikes
+5. **Optimize quarterly** — Review tool usage, consolidate licenses, switch models
+
+**Usagely** handles all of this out of the box — open source and self-hostable. Connect your AI providers and get full visibility in minutes.

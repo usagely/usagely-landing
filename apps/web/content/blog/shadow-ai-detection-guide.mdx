@@ -1,0 +1,81 @@
+---
+category: "Security"
+title: "Shadow AI: How to Find What Your Team Is Using Without a Policy"
+author: "Usagely Team"
+excerpt: "65% of employees use unapproved AI tools. Here's how to detect Shadow AI in your organization and what to do about it."
+publishedAt: "2026-04-19"
+updatedAt: "2026-04-19"
+coverSrc: "/assets/website/blog-image.png"
+authorImageSrc: "/assets/website/author-image.png"
+readingTime: "6 min read"
+draft: false
+---
+
+## The Shadow AI Problem
+
+According to Gartner, **65% of employees use AI tools that their company hasn't approved**. This isn't malicious — it's practical. Developers find tools that make them more productive and start using them immediately.
+
+The problem? These unapproved tools create real risks:
+
+- **Data leakage** — Sensitive code, customer data, or proprietary information flowing through third-party AI services
+- **Compliance violations** — Tools that don't meet GDPR, SOC 2, or industry-specific requirements
+- **Budget surprises** — Costs that appear on personal expense reports or shadow credit cards
+- **Vendor sprawl** — 15 different tools doing the same thing across teams
+
+## How Shadow AI Enters Organizations
+
+### The Productivity Seeker
+A developer discovers Cursor or Claude Code and starts using the free tier. It works great, so they upgrade to a paid plan on their personal card and expense it later.
+
+### The Team Purchase
+An engineering lead buys ChatGPT Team for their 5-person squad without going through procurement. Other teams don't know about it.
+
+### The API Experimenter
+Someone gets an OpenAI API key to test a feature. The feature ships, but the key keeps getting used — and the costs keep growing.
+
+### The Free-Tier Upgrade
+A free tool like Replit or v0 gets adopted widely. Then the team hits usage limits and upgrades to a paid plan without informing anyone.
+
+## Detection Methods
+
+### 1. Expense Report Analysis
+Search expense reports for AI tool names: OpenAI, Anthropic, Cursor, Replit, v0, Perplexity, Midjourney, etc. This catches seat-based tools.
+
+### 2. SSO and Identity Logs
+Check your identity provider (Okta, Google Workspace, Azure AD) for sign-ups and logins to AI services. Many tools offer SSO integration, leaving a trail.
+
+### 3. Network Monitoring
+DNS logs and proxy logs reveal API calls to AI providers:
+- `api.openai.com`
+- `api.anthropic.com`
+- `githubcopilot.com`
+- `cursor.sh`
+
+### 4. Code Repository Scanning
+Search commits and PRs for AI-generated patterns — imports from AI SDKs, prompt templates, or AI tool configuration files.
+
+### 5. Developer Surveys
+Simply ask. Most developers are happy to share what tools they find useful — especially if there's a path to getting them officially approved.
+
+## What to Do When You Find Shadow AI
+
+**Don't panic. Don't ban everything.**
+
+1. **Catalog** — List every tool, who uses it, and why
+2. **Evaluate** — Is it actually useful? Does it meet security requirements?
+3. **Decide** — Approve it, replace it with an approved alternative, or phase it out
+4. **License** — Get proper enterprise licenses for tools you want to keep
+5. **Monitor** — Set up ongoing detection so new tools are caught early
+
+## How Usagely Helps
+
+Usagely's **Shadow AI Detection** feature automatically discovers unapproved tools through:
+
+- Expense report scanning
+- SSO log analysis
+- Network traffic monitoring
+- API key usage tracking
+
+Each detected tool gets a risk score (low, medium, high), user count, and estimated monthly cost — so you can prioritize which to address first.
+
+Start detecting shadow AI in your organization today with Usagely — open source and free to self-host.
