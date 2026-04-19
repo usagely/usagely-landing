@@ -1,6 +1,4 @@
-import Architecture from "@/app/(website)/_components/Architecture";
 import Hero from "@/app/(website)/_components/Hero";
-import Kits from "@/app/(website)/_components/Kits";
 import FAQ from "@/app/(website)/_components/FAQ";
 import Demo from "@/app/(website)/_components/Demo";
 import Pricing from "@/app/(website)/_components/Pricing";
@@ -11,7 +9,8 @@ import Works from "./_components/Works";
 import Trusted from "@website/_components/Trusted";
 import Own from "./_components/Own";
 import Testimonials from "@website/_components/Testimonials";
-import Customize from "./_components/Customize";
+
+export const dynamic = "force-dynamic";
 
 const HomePage = () => {
   return (

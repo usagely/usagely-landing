@@ -8,6 +8,8 @@ import { JsonLd } from "../../_components/seo/JsonLd";
 import { pricingOfferCatalogJsonLd } from "@/lib/seo/schema";
 import Pricing from "../../_components/Pricing";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Pricing",
 };
