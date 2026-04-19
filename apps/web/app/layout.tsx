@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Providers } from "@/components/providers";
 
@@ -84,6 +86,8 @@ export default function RootLayout({
         <div id="ui-portal-root" />
         <Providers>{children} </Providers>
         <Toaster position="top-right" reverseOrder={false} />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
