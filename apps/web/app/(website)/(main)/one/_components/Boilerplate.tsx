@@ -1,11 +1,10 @@
 const Boilerplate = () => {
   return (
-    <section className="bg-primary-100 py-12 md:py-16 lg:py-20 overflow-hidden">
+    <section className="bg-primary-100 dark:bg-sidebar-border py-12 md:py-16 lg:py-20 overflow-hidden relative">
+      <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
+        backgroundImage: "radial-gradient(circle at 15% 20%, rgba(99,102,241,0.2), transparent 40%), radial-gradient(circle at 85% 80%, rgba(139,92,246,0.18), transparent 40%)",
+      }} />
       <div className="px-4 md:px-8 lg:px-12 max-w-[1440px] mx-auto relative">
-        <div className="absolute -right-44 -top-10 xs:-right-40 sm:-right-30 md:-right-20 lg:right-8 xl:right-16">
-          <img src="/assets/website/floating-dashboard.webp" alt="" />
-        </div>
-
         <div className="text-center flex flex-col gap-4 xsm:w-[90%] xs:w-4/5 mx-auto">
           <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold md:w-4/5 mx-auto dark:text-popover">
             AI spending is the fastest-growing
@@ -19,10 +18,6 @@ const Boilerplate = () => {
             <br className="hidden lg:block" />
             Usagely gives every team a single pane of glass to understand, control, and optimize AI spending.
           </p>
-        </div>
-
-        <div className="absolute hidden md:block -bottom-20 -left-18 lg:-bottom-12 lg:left-0 xl:left-14">
-          <img src="/assets/website/floating-dashboard.webp" alt="" />
         </div>
       </div>
     </section>

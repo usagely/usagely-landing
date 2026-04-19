@@ -1,6 +1,6 @@
 export const spendDashboardData = {
   title: "Unified AI Spend Dashboard",
-  image: "/assets/website/works-dashboard.webp",
+  icon: "chart" as const,
   reverse: false,
   items: [
     "<span class='font-bold'>Daily totals</span> — per-tool, per-model, per-user cost breakdown in real time.",
@@ -11,7 +11,7 @@ export const spendDashboardData = {
 
 export const budgetAlertsData = {
   title: "Budgets with Smart Alerts",
-  image: "/assets/website/works-dashboard.webp",
+  icon: "bell" as const,
   reverse: true,
   items: [
     "<span class='font-bold'>Monthly/quarterly budgets</span> by team or company scope.",
@@ -22,7 +22,7 @@ export const budgetAlertsData = {
 
 export const shadowAiData = {
   title: "Shadow AI Detection",
-  image: "/assets/website/works-dashboard.webp",
+  icon: "eye" as const,
   reverse: false,
   items: [
     "<span class='font-bold'>Discover unapproved tools</span> via expenses, SSO logs, or network monitoring.",
@@ -33,7 +33,7 @@ export const shadowAiData = {
 
 export const savingsRecommendationsData = {
   title: "Savings Recommendations",
-  image: "/assets/website/works-dashboard.webp",
+  icon: "lightbulb" as const,
   reverse: true,
   items: [
     "<span class='font-bold'>Confidence-scored</span> suggestions to reduce AI costs.",
@@ -44,7 +44,7 @@ export const savingsRecommendationsData = {
 
 export const integrationsData = {
   title: "Native AI Provider Integrations",
-  image: "/assets/website/works-dashboard.webp",
+  icon: "plug" as const,
   reverse: false,
   items: [
     "Direct connectors to <span class='font-bold'>OpenAI, Anthropic, AWS Bedrock, GitHub Copilot</span>.",
@@ -55,7 +55,7 @@ export const integrationsData = {
 
 export const openSourceTrustData = {
   title: "Open Source Trust",
-  image: "/assets/website/works-dashboard.webp",
+  icon: "shield" as const,
   reverse: true,
   items: [
     "<span class='font-bold'>AGPL-3.0 licensed</span> — self-host freely, forever. Full data ownership.",

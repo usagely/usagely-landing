@@ -1,11 +1,11 @@
-
 import { cn } from "@metallicjs/ui/lib/utils";
 import CheckmarkIcon from "@/public/assets/website/checkmark-icon.svg";
 
 interface TextGridProps {
   title: string;
   subtitle?: string;
-  image: string;
+  image?: string;
+  icon?: "chart" | "bell" | "eye" | "lightbulb" | "plug" | "shield";
   items: string[];
   reverse?: boolean;
   vertical?: boolean;
@@ -14,18 +14,18 @@ interface TextGridProps {
 const TextGrid = ({
   title,
   subtitle,
-  image,
+  icon,
   items,
   reverse = false,
   vertical,
 }: TextGridProps) => {
+  const Visual = <IconVisual icon={icon ?? "chart"} />;
+
   if (vertical)
     return (
       <div className="p-1 rounded-md bg-background dark:bg-popover border-2 border-card dark:border-sidebar-border h-full w-full">
         <div className="flex flex-col gap-6 md:gap-8">
-          <div className="flex items-center justify-center">
-            <img src={image} alt="" />
-          </div>
+          <div className="flex items-center justify-center">{Visual}</div>
 
           <div className="flex flex-col gap-2 justify-center mx-auto bg-card dark:bg-sidebar-border p-4 rounded-md">
             <h4 className="font-bold text-lg sm:text-xl">{title}</h4>
@@ -45,13 +45,11 @@ const TextGrid = ({
   return (
     <div
       className={cn(
-        "grid md:grid-cols-2 gap-6 md:gap-8",
+        "grid md:grid-cols-2 gap-6 md:gap-8 items-center",
         reverse ? "md:[&>*:first-child]:order-2" : ""
       )}
     >
-      <div className="flex items-center justify-center">
-        <img src={image} alt="" />
-      </div>
+      <div className="flex items-center justify-center">{Visual}</div>
 
       <div className="flex flex-col gap-4 justify-center max-w-[700px] mx-auto">
         <h4 className="font-bold text-lg sm:text-xl">{title}</h4>
@@ -85,28 +83,89 @@ const TextGridItem = ({ children }: TextGridItemProps) => {
   );
 };
 
-// Allow only very small subset: <span class='font-bold'>...</span> and plain text.
+function IconVisual({ icon }: { icon: "chart" | "bell" | "eye" | "lightbulb" | "plug" | "shield" }) {
+  return (
+    <div className="relative aspect-square w-full max-w-sm rounded-2xl bg-gradient-to-br from-primary-500/10 via-primary-400/5 to-transparent border border-border/40 flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 opacity-50" style={{
+        backgroundImage: "radial-gradient(circle at 20% 20%, rgba(99,102,241,0.15), transparent 50%), radial-gradient(circle at 80% 80%, rgba(139,92,246,0.12), transparent 50%)",
+      }} />
+      <div className="relative z-10 text-primary-500 dark:text-primary-400">
+        {renderIcon(icon)}
+      </div>
+    </div>
+  );
+}
+
+function renderIcon(icon: string) {
+  const common = "w-24 h-24 md:w-32 md:h-32";
+  switch (icon) {
+    case "chart":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 3v18h18" />
+          <rect x="7" y="12" width="3" height="6" fill="currentColor" opacity="0.3" />
+          <rect x="12" y="8" width="3" height="10" fill="currentColor" opacity="0.5" />
+          <rect x="17" y="4" width="3" height="14" fill="currentColor" opacity="0.7" />
+        </svg>
+      );
+    case "bell":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+          <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+          <circle cx="18" cy="6" r="3" fill="currentColor" opacity="0.8" />
+        </svg>
+      );
+    case "eye":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+          <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.6" />
+        </svg>
+      );
+    case "lightbulb":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 18h6" />
+          <path d="M10 22h4" />
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" fill="currentColor" fillOpacity="0.2" />
+        </svg>
+      );
+    case "plug":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22v-5" />
+          <path d="M9 7V2" />
+          <path d="M15 7V2" />
+          <path d="M6 13V8h12v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z" fill="currentColor" fillOpacity="0.2" />
+        </svg>
+      );
+    case "shield":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="currentColor" fillOpacity="0.2" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 const RenderHTML = ({ html }: { html: string }) => {
   const safe = sanitizeInlineHtml(html);
   return <span dangerouslySetInnerHTML={{ __html: safe }} />;
 };
 
 function sanitizeInlineHtml(input: string) {
-  // Strip script/style tags entirely
   let out = input
     .replace(/<\s*script[^>]*>[\s\S]*?<\s*\/\s*script\s*>/gi, "")
     .replace(/<\s*style[^>]*>[\s\S]*?<\s*\/\s*style\s*>/gi, "");
 
-  // Remove event handlers like onclick=...
   out = out.replace(/\son\w+\s*=\s*(['"]).*?\1/gi, "");
-
-  // Remove javascript: URLs
   out = out.replace(/\s(href|src)\s*=\s*(['"])\s*javascript:.*?\2/gi, "");
-
-  // Drop all tags except <span> and <br>
   out = out.replace(/<(\/?)(?!span\b|br\b)[^>]*>/gi, "");
 
-  // On span, allow only class="font-bold" (or class='font-bold'); strip any other attributes
   out = out.replace(/<span\b([^>]*)>/gi, (match, attrs) => {
     const hasBold = /\bclass\s*=\s*(['"])\s*font-bold\s*\1/i.test(attrs);
     return hasBold ? "<span class='font-bold'>" : "<span>";

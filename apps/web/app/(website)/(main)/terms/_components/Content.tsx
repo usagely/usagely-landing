@@ -78,7 +78,7 @@ const Content = () => {
       </aside>
       <article className="space-y-8 text-muted-foreground">
         <section>
-          <p>Welcome to MetallicJS ("we", "our", or "us").</p>
+          <p>Welcome to Usagely ("we", "our", or "us").</p>
           <p>
             Your privacy is important to us. This Privacy Policy explains how we
             collect, use, and protect your information when you use our website,
@@ -216,13 +216,13 @@ const Content = () => {
           <div className="flex flex-col gap-2 mt-1">
             <div className="flex gap-1 items-center">
               <p className="font-bold text-accent-foreground">Email:</p>
-              <a href="mailto:support@metallicjs.com" className="underline">
-                support@metallicjs.com
+              <a href="mailto:hello@usagely.io" className="underline">
+                hello@usagely.io
               </a>
             </div>
             <div className="flex gap-1 items-center">
               <p className="font-bold text-accent-foreground">Company:</p>
-              <p>MetallicJS</p>
+              <p>Usagely</p>
             </div>
           </div>
         </section>

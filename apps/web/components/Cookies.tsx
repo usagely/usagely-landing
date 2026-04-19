@@ -20,7 +20,7 @@ const Cookies = () => {
               Please note that we take your privacy seriously and only process
               your personal information. Your continued use of this platform
               indicates that you consent to the processing of your data by
-              MetallicJS.
+              Usagely.
             </p>
           </div>
           <p className="text-muted-foreground">

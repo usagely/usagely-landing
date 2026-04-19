@@ -35,7 +35,7 @@ const Works = () => {
           <TextGrid
             key={i}
             title={section.title}
-            image={section.image}
+            icon={section.icon}
             items={section.items}
             reverse={section.reverse}
           />
