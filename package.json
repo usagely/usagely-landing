@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky && husky install",
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "echo 'allowing npm for Vercel build'",
     "dev": "pnpm run gen:og && pnpm --filter @web/dev dev"
   },
   "type": "module",
@@ -43,18 +43,20 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "dependencies": {
-    "@metallicjs/shared": "workspace:*",
+    "@metallicjs/shared": "*",
     "zod": "^4.0.10"
   },
-  "pnpm": {
-    "overrides": {
-      "react": "^19.1.0",
-      "react-dom": "^19.1.0",
-      "@types/react": "^19.1.6",
-      "@types/react-dom": "^19.1.6"
-    }
+  "overrides": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6"
   },
   "engines": {
     "node": "20.x"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
