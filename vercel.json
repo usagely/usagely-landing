@@ -1,5 +1,5 @@
 {
   "framework": "nextjs",
-  "installCommand": "npm install",
+  "installCommand": "npm config set registry https://registry.npmjs.org/ && npm install",
   "buildCommand": "cd apps/web && next build"
 }
