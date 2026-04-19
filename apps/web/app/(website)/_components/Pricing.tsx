@@ -39,7 +39,7 @@ const Pricing = () => {
                   <div className="flex flex-col gap-3 text-muted-foreground text-sm">
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Unlimited users, tools, organizations</p>
+                      <p>Unlimited users, tools, orgs</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
@@ -47,7 +47,7 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>All AI provider integrations</p>
+                      <p>All 40+ AI provider integrations</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
@@ -59,7 +59,11 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Community support (Discord)</p>
+                      <p>Approval workflow</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckIcon className="shrink-0" />
+                      <p>Community support (Discord + GitHub)</p>
                     </div>
                   </div>
                 </div>
@@ -93,11 +97,11 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Up to 15 users</p>
+                      <p>Up to 15 users, 1 organization</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Managed hosting & backups</p>
+                      <p>Managed hosting + backups</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
@@ -105,11 +109,11 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Email alerts for anomalies</p>
+                      <p>Email alerts (anomalies + budgets)</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Email support (48h)</p>
+                      <p>Email support (48h response)</p>
                     </div>
                   </div>
                 </div>
@@ -146,7 +150,11 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Up to 100 users</p>
+                      <p>Up to 100 users, 1 organization</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckIcon className="shrink-0" />
+                      <p>Team-level budget segmentation</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
@@ -154,15 +162,15 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>CSV/PDF exports</p>
+                      <p>CSV / PDF export for finance</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Basic RBAC (admin/viewer)</p>
+                      <p>Basic RBAC (admin / viewer)</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Priority support (24h)</p>
+                      <p>Priority email support (24h)</p>
                     </div>
                   </div>
                 </div>
@@ -180,7 +188,7 @@ const Pricing = () => {
                   </h4>
                 </div>
                 <div className="text-muted-foreground text-sm pb-2">
-                  Large orgs with compliance needs.
+                  Large orgs with compliance + scale needs.
                 </div>
                 <div className="flex flex-col gap-8 w-full flex-1">
                   <Button
@@ -197,11 +205,11 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Unlimited users & orgs</p>
+                      <p>Unlimited users + multiple orgs</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>SSO / SAML (Okta, Google, Azure)</p>
+                      <p>SSO / SAML (Okta, Google, Azure AD)</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
@@ -209,11 +217,19 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>Custom integrations</p>
+                      <p>Custom integrations (Workday, etc.)</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckIcon className="shrink-0" />
-                      <p>99.9% SLA + dedicated support</p>
+                      <p>99.9% SLA + dedicated Slack channel</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckIcon className="shrink-0" />
+                      <p>Self-hosted with commercial license</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckIcon className="shrink-0" />
+                      <p>Annual invoicing</p>
                     </div>
                   </div>
                 </div>
