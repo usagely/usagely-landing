@@ -105,7 +105,7 @@ function Button({
       )}
       {...props}
     >
-      {pending && <Loader2Icon className="animate-spin" />}
+      {!asChild && pending && <Loader2Icon className="animate-spin" />}
       {props.children}
     </Comp>
   );

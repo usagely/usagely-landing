@@ -10,8 +10,6 @@ import Trusted from "@website/_components/Trusted";
 import Own from "./_components/Own";
 import Testimonials from "@website/_components/Testimonials";
 
-export const dynamic = "force-dynamic";
-
 const HomePage = () => {
   return (
     <>
